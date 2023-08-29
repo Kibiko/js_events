@@ -35,14 +35,14 @@ const createAndAppendListItem = () => {
     const completeButton = document.createElement("input");
     completeButton.type = "checkbox";
     const newCompletedItem = document.createElement("li");
-    newCompletedItem.innerText = newListItem.innerText;
     completeButton.onclick = () => {
         if(completeButton.checked == true){
+            newCompletedItem.innerText = newListItem.innerText;
             newListItem.classList.add("completedTask");
             completedList.appendChild(newCompletedItem);
         } else {
             newListItem.classList.remove("completedTask");
-            completedList.remove(newCompletedItem);
+            newCompletedItem.remove();
         }
     }
     list.appendChild(completeButton);
