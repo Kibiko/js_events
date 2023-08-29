@@ -1,0 +1,9 @@
+.completedTask {
+    color: gray;
+    text-decoration: line-through;
+} 
+
+#list{
+    display: block;
+    gap: 2em;
+}
